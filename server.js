@@ -1,14 +1,18 @@
 const http = require('http');
+const url = require('url');
+const path = require('path');
+const fs = require('fs');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const mimeTypes = {
+  "html" : "text/html",
+  "jpeg" : "image/jpeg",
+  "jpg" : "image/jpg",
+  "png" : "image/png",
+  "js" : "text/javascript",
+  "css" : "text/css"
+}
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader = ('Content-Type', 'text/plain');
-  res.end('hello, world\n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`server running at http://${hostname}:${port}/`)
+http.createServer(function(req, res) {
+  var uri = url.parse(req.url).pathname;
+  
 });
