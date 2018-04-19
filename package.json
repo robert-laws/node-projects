@@ -1,0 +1,22 @@
+{
+  "name": "node-projects",
+  "version": "1.0.0",
+  "description": "NodeJS projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-laws/node-projects.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Robert Laws",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robert-laws/node-projects/issues"
+  },
+  "homepage": "https://github.com/robert-laws/node-projects#readme"
+}
