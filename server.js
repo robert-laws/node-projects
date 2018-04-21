@@ -1,18 +1,7 @@
-const http = require('http');
-const url = require('url');
-const path = require('path');
-const fs = require('fs');
+const express = require('express');
+const greeting = require('./greeting');
 
-const mimeTypes = {
-  "html" : "text/html",
-  "jpeg" : "image/jpeg",
-  "jpg" : "image/jpg",
-  "png" : "image/png",
-  "js" : "text/javascript",
-  "css" : "text/css"
-}
+const app = express();
 
-http.createServer(function(req, res) {
-  var uri = url.parse(req.url).pathname;
-  
-});
+app.get('/', (req, res) => res.send(greeting.sayHello()));
+app.listen('3000', () => console.log('listening on port 3000'));
